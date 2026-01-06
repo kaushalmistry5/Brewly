@@ -12,4 +12,7 @@ class AppImages {
 
   // Detail image
   static const String coffeeDetail = '$_basePath/coffee_detail.png';
+  static const String deliveryimage = '$_basePath/delivery.png';
 }
+
+//content page

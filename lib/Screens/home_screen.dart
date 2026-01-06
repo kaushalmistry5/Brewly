@@ -64,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
       case 1:
         return const favourite_screen();
       case 2:
-        return const coffee_order();
+        return const CoffeeOrderPage();
       default:
         return const Center(
           child: Text('Coming Soon'),

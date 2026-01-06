@@ -30,10 +30,7 @@ class CoffeeDetailScreen extends StatelessWidget {
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.pop(context),
         ),
-        title: const Text(
-          'Detail',
-          style: TextStyle(color: Colors.black),
-        ),
+        title: const Text('Detail', style: TextStyle(color: Colors.black)),
         centerTitle: true,
         actions: [
           IconButton(
@@ -63,20 +60,14 @@ class CoffeeDetailScreen extends StatelessWidget {
             // TITLE
             Text(
               title,
-              style: const TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
+              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
 
             const SizedBox(height: 4),
 
             Text(
               subtitle,
-              style: const TextStyle(
-                color: Colors.grey,
-                fontSize: 14,
-              ),
+              style: const TextStyle(color: Colors.grey, fontSize: 14),
             ),
 
             const SizedBox(height: 12),
@@ -94,10 +85,7 @@ class CoffeeDetailScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 4),
-                Text(
-                  '($reviews)',
-                  style: const TextStyle(color: Colors.grey),
-                ),
+                Text('($reviews)', style: const TextStyle(color: Colors.grey)),
               ],
             ),
 
@@ -110,21 +98,15 @@ class CoffeeDetailScreen extends StatelessWidget {
             // DESCRIPTION
             const Text(
               'Description',
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.w600,
-              ),
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
             ),
 
             const SizedBox(height: 8),
 
             const Text(
               'A cappuccino is an approximately 150 ml (5 oz) beverage, '
-                  'with 25 ml of espresso coffee and 85 ml of fresh milk the fo...Read More',
-              style: TextStyle(
-                color: Colors.grey,
-                height: 1.5,
-              ),
+              'with 25 ml of espresso coffee and 85 ml of fresh milk the fo...Read More',
+              style: TextStyle(color: Colors.grey, height: 1.5),
             ),
 
             const SizedBox(height: 34),
@@ -132,10 +114,7 @@ class CoffeeDetailScreen extends StatelessWidget {
             // SIZE
             const Text(
               'Size',
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.w600,
-              ),
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
             ),
 
             const SizedBox(height: 12),
@@ -159,10 +138,7 @@ class CoffeeDetailScreen extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
-                      'Price',
-                      style: TextStyle(color: Colors.grey),
-                    ),
+                    const Text('Price', style: TextStyle(color: Colors.grey)),
                     const SizedBox(height: 4),
                     Text(
                       '\$${price.toStringAsFixed(2)}',
@@ -175,31 +151,36 @@ class CoffeeDetailScreen extends StatelessWidget {
                   ],
                 ),
                 Padding(
-                    padding: const EdgeInsets.only(left: 16),
-                    child: SizedBox(
-                      width: 250,
-                      height: 60,
-                      child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(context, MaterialPageRoute( builder: (context) => const coffee_order()));
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFFB37A4C),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(16),
+                  padding: const EdgeInsets.only(left: 16),
+                  child: SizedBox(
+                    width: 250,
+                    height: 60,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const CoffeeOrderPage(),
                           ),
+                        );
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFFB37A4C),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16),
                         ),
-                        child: const Text(
-                          'Buy Now',
-                          style: TextStyle(
-                            fontSize: 18,
-                            color: Colors.white,
-                            fontWeight: FontWeight.w600,
-                          ),
+                      ),
+                      child: const Text(
+                        'Buy Now',
+                        style: TextStyle(
+                          fontSize: 18,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                     ),
                   ),
+                ),
               ],
             ),
           ],

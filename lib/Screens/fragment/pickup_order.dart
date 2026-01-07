@@ -162,7 +162,7 @@ class PickupOrderPage extends StatelessWidget {
                       CircleAvatar(
                         radius: 24,
                         backgroundImage: AssetImage(
-                          'assets/images/courier_avatar.png',
+                          AppImages.profile_pickup,
                         ),
                       ),
                       const SizedBox(width: 12),
